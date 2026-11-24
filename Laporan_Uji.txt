@@ -1,0 +1,14 @@
+Uji	Aturan yang diuji			Hasil yang diharapkan			Hasil aktual			Status (Lulus/Belum)
+U1	PRIMARY KEY kode_barang			Ditolak #1062				Ditolak #1062			Lulus
+U2	UNIQUE nama_kategori			Ditolak #1062				Ditolak #1062			Lulus
+U3	FOREIGN KEY id_kategori			Ditolak #1452				Ditolak #1452			Lulus
+U4	CHECK jumlah_tersedia >= 0		Ditolak #4025 / #3819			Ditolak #4025			Lulus	
+U5	NOT NULL nama_barang			Ditolak #1048				Ditolak #1048			Lulus	
+U6	RESTRICT hapus barang			Ditolak #1451				Ditolak #1451			Lulus
+U7	RESTRICT hapus kategori			Ditolak #1451				Ditolak #1451			Lulus
+U8	CHECK tanggal kembali			Ditolak #4025 / #3819			Ditolak #4025			Lulus
+U9	CHECK jumlah > 0			Ditolak #4025 / #3819			Ditolak #4025			Lulus
+U10	UNIQUE (id_peminjaman, kode_barang)	Ditolak #1062				Ditolak #1062			Lulus
+U11	CASCADE hapus transaksi			Berhasil, sisa detail BRG-003 = 0	Berhasil, 1 row affected,	Lulus
+											sisa detail BRG-003 = 0	
+16.8	CHECK di database hasil import		Ditolak #4025 / #3819			Ditolak #4025			Lulus
